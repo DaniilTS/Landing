@@ -11,6 +11,10 @@ html, body {
     overflow-x: hidden;
 }
 
+a, h1, h2, p {
+    cursor: default;
+}
+
 .header {
     width: 100%;
     height: 80px;
@@ -62,11 +66,9 @@ html, body {
     line-height: 15px;
 }
 
-.menu__element--active {
+.menu__element:hover {
     color: #5E81FE;
     font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
 }
 
 .header__right {
@@ -126,6 +128,27 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+}
+
+.productivity .clouds__mobile {
+    display: none;
+}
+
+.productivity__select-circles {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 170px;
+}
+
+.chart {
+    position: absolute;
+    top: 280px;
+    width: 100%;
+}
+
+.chart .line {
+    transform: scale(1.24);
 }
 
 .productivity__text {
@@ -371,6 +394,10 @@ html, body {
     box-shadow: 0px 5px 15px rgba(188, 199, 255, 0.75);
 }
 
+.plan-and-manage__buttons button:first-child:hover {
+    background: #395ca8;
+}
+
 .plan-and-manage__buttons button:last-child {
     font-family: 'Quicksand';
     font-style: normal;
@@ -380,6 +407,10 @@ html, body {
     border: 1px solid #D1D1E4;
 
     color: #ADB4D2;
+}
+
+.plan-and-manage__buttons button:last-child:hover {
+    background-color: #D2E1FF;
 }
 
 .features {
@@ -498,9 +529,19 @@ html, body {
     color: #D43F3F;
 }
 
+.about__content .content__buttons button:first-child:hover {
+    background: #D43F3F;
+    color: #FFD7D7;
+}
+
 .about__content .content__buttons button:last-child {
     background: #D2E1FF;
     color: #3A79FF;
+}
+
+.about__content .content__buttons button:last-child:hover {
+    background: #3A79FF;
+    color: #D2E1FF;
 }
 
 .features__item {
@@ -772,8 +813,13 @@ html, body {
     background: #D2E1FF;
 }
 
+.content__text .text__buttons button:first-child:hover {
+    background: #3A79FF;
+    color: #D2E1FF;
+}
+
 .content__text .text__buttons button:last-child {
-    background: #FFFFFF;;
+    background: #FFFFFF;
 }
 
 .quotes {
@@ -1043,6 +1089,10 @@ html, body {
     color: #7382A3;
 }
 
+.questions__item .item__content button:hover {
+    background: #D2E1FF;
+}
+
 .get-started {
     width: 100%;
     height: 447px;
@@ -1239,6 +1289,10 @@ html, body {
     color: #FFFFFF;
 }
 
+.sign-up__form button:hover {
+    background: #4864c7;
+}
+
 .footer {
     width: 100%;
     height: 287px;
@@ -1288,6 +1342,16 @@ html, body {
     justify-content: center;
     gap: 35px;
     margin-right: 44px;
+}
+
+.footer__right .right__button:hover {
+    color: #D2E1FF;
+    background-color: #3A79FF;
+}
+
+.header__right .right__button:hover {
+    color: #D2E1FF;
+    background-color: #3A79FF;
 }
 
 .footer__left {
@@ -1350,4 +1414,90 @@ html, body {
 
 .select-circle--selected {
     background-color: #5283FF;
+}
+
+@media screen and (max-width: 376px) {
+    .header__left {
+        display: none;
+    }
+
+    .header__right {
+        flex-direction: row-reverse;
+        padding-left: 10px;
+    }
+
+    .header__right .right__button{
+        display: none;
+    }
+
+    .header__left .left__menu {
+        gap: 5px;
+    }
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .menu__element {
+        font-size: 10px;
+    }
+
+    .productivity .clouds {
+        display: none;
+    }
+
+    .productivity .clouds__mobile {
+        display: block;
+    }
+
+    .productivity__text .text-1 {
+        margin-top: 40px;
+    }
+
+    .productivity__text .text-3 {
+        width: 330px;
+    }
+
+    .productivity__button {
+        margin-top: 45px;
+    }
+
+    .chart {
+        top: 340px;
+    }
+
+    .productivity__select-circles {
+        margin-top: 145px;
+    }
+
+    .customers {
+        flex-wrap: wrap;
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .plan-and-manage {
+        height: 600px;
+    }
+
+    .plan-and-manage img {
+        display: none;
+    }
+
+    .plan-and-manage__content {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .plan-and-manage__content .content__text {
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .plan-and-manage__content .content__text p {
+        width: 90%;
+        text-align: center;
+    }
 }
